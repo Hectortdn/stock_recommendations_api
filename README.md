@@ -11,6 +11,30 @@ Este é um projeto de API Python desenvolvido com o objetivo de fornecer informa
 
 **Nota:** Este projeto encontra-se em fase de desenvolvimento e ainda não foi concluído. Estou trabalhando para adicionar mais recursos e aprimorar a funcionalidade da API
 
+## Como Usar
+
+Para usar uma API, siga estas etapas:
+
+**1.** Certifique-se de ter o Python instalado em seu sistema.
+**2.** Crie um ambiente virtual para o projeto, se necessário.
+```bash
+  python -m venv venv
+```
+**3.** Ative o ambiente
+   
+**Windows:**
+```bash
+  venv\Scripts\activate
+```
+**Linux/MacOS:**
+```bash
+source venv/bin/activate
+```
+**4.** Instale as dependências do projeto com o comando:
+```bash
+pip install -r requirements.txt
+```
+
 ## Iniciando o Servidor
 
 Para iniciar o servidor da API, execute o seguinte comando:
