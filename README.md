@@ -4,10 +4,10 @@
 Este é um projeto de API Python desenvolvido com o objetivo de fornecer informações detalhadas sobre ações e dados de mercado financeiro. A API foi construída com as seguintes tecnologias e bibliotecas:
 
 - **Python:** A linguagem de programação utilizada para desenvolver a API.
-- **Flask:** Um framework web em Python que facilita a criação de aplicativos web.
-- **yfinance:** Uma biblioteca Python que permite acessar e extrair dados de ações e finanças.
-- **Fundamentos API:** Uma fonte de dados que fornece informações financeiras fundamentais.
+- **Flask:** Um framework Python que facilita a criação de rotas e solicitações HTTP.
 - **Pandas:** Uma biblioteca Python amplamente utilizada para manipulação e análise de dados.
+- **yfinance:** Uma biblioteca Python que permite acessar e extrair dados de ações e finanças.
+- **Fundamentus:** Uma biblioteca Python que  acessar e extrair informações financeiras fundamentais.
 
 **Nota:** Este projeto encontra-se em fase de desenvolvimento e ainda não foi concluído. Estou trabalhando para adicionar mais recursos e aprimorar a funcionalidade da API
 
@@ -53,7 +53,7 @@ Esta rota fornece dados de gráficos de candlestick para várias ações.
     "chartClose": [ {
         "x": "2023-04-26 00:00:00-03:00",
         "y": 27.2
-      },...]
+      },...],
     "chartValues":[ {
         "x": "2023-04-26 00:00:00-03:00",
         "y": 30.4
