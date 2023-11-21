@@ -1,12 +1,10 @@
 import yfinance as yf
 import pandas as pd
-from  utils.index  import get_sector_by_ticker
+from  utils.index  import get_sector_by_ticker, actions_sectors
 
 
 def get_yfinance_ticker(ticker,period='6mo' ) -> pd.DataFrame:
     ticker_data = yf.Ticker(f'{ticker}.SA')
-
-    news = ticker_data.get_news()
 
     typeSector = get_sector_by_ticker(ticker)
     ticker_history = ticker_data.history(period=period).round(2)
@@ -23,9 +21,9 @@ def get_yfinance_ticker(ticker,period='6mo' ) -> pd.DataFrame:
     percentageVariation =  round((((_stock_close.iloc[-1] - _stock_close.iloc[-2]) / _stock_close.iloc[-2]) * 100), 2)
 
     return {    
-        "news": news,   
         "ticker": ticker,
         "sector": typeSector,
         "stockValues": stock_values,
-        "percentageVariation":percentageVariation
+        "percentageVariation":percentageVariation,
+        "sectorLabel": actions_sectors[typeSector],
     }

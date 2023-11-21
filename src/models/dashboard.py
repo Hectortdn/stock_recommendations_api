@@ -17,7 +17,7 @@ repository = Repository()
 # Utilities
 def get_fundamentus_data():
     tickers = get_all_commodities_tickers()
-    columns_selected = ['papel','cotacao', 'pl', 'roic', 'roe', 'liq2m', 'patrliq', 'evebit']
+    columns_selected = ['papel','cotacao', 'pl', 'roic', 'roe', 'liq2m', 'patrliq', 'evebit', 'mrgliq']
 
     try:
         df_fundamentus: pd.DataFrame = get_fundamentus_result()
@@ -45,7 +45,7 @@ def get_yfinance_data():
         print('Error in get yfinance data', error)
 
 def get_stock():
-    try:
+    try: 
 
         if repository.fundamentus == None and repository.yfinance == None:  
             df_fundamentus =  get_fundamentus_data()

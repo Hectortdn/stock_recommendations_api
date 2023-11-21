@@ -20,6 +20,9 @@ class TickerController:
         ticker_info = tk.get_ticker_info(ticket_name, tickers)
         return ticker_info
     
+    def get_ticker_news(self, ticket_name):
+        return tk.get_ticker_news(ticket_name)
+    
 
 
 

@@ -21,6 +21,15 @@ actions_commodities = {
     "animalProteinStocks": animalProteinTikers,
 }
 
+actions_sectors = {
+    "paperPulpStocks": "Papel e celulose",
+    "animalProteinStocks": "Proteína animal",
+    "agriDiverseStocks": "Agrícolas e outras",
+    "energyStocks": "Petróleo, gás e combustíveis",
+    "miningMetalsStocks": "Mineradoras, metalurgia e siderurgia",
+}
+
+
 
 def get_all_commodities_tickers():
     result = []
@@ -104,7 +113,7 @@ def rename_cols_fundamentus(data):
 
     ## Fix: rename columns
     df['cotacao'  ] = data['Cotação'          ]
-    df['pl'       ] = data['P/L'              ]
+    df['pl'       ] = data['P/L'              ].round(2)
     df['pvp'      ] = data['P/VP'             ]
     df['psr'      ] = data['PSR'              ]
     df['dy'       ] = data['Div.Yield'        ]
@@ -115,9 +124,9 @@ def rename_cols_fundamentus(data):
     df['evebit'   ] = data['EV/EBIT'          ]
     df['evebitda' ] = data['EV/EBITDA'        ]
     df['mrgebit'  ] = data['Mrg Ebit'         ]
-    df['mrgliq'   ] = data['Mrg. Líq.'        ]
-    df['roic'     ] = data['ROIC'             ]
-    df['roe'      ] = data['ROE'              ]
+    df['mrgliq'   ] = data['Mrg. Líq.'        ].round(2)
+    df['roic'     ] = data['ROIC'             ].round(2)
+    df['roe'      ] = data['ROE'              ].round(2)
     df['liqc'     ] = data['Liq. Corr.'       ]
     df['liq2m'    ] = data['Liq.2meses'       ]
     df['patrliq'  ] = data['Patrim. Líq'      ]

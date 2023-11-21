@@ -34,10 +34,5 @@ def get_fundamentus_result() -> pd.DataFrame:
     df_rename = rename_cols_fundamentus(df)
 
     df = df_rename.drop_duplicates(keep='first')
-
-
-
-    # df_fundamentus_response =  fundamentus.get_resultado()
-    # print()table
     
     return df 
